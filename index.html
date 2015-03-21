@@ -5,21 +5,52 @@
 		* {
 			font-family: 'Source Sans Pro', sans-serif;		
 		}
+
+		.typed-cursor{
+			opacity: 1;
+			-webkit-animation: blink 0.7s infinite;
+			-moz-animation: blink 0.7s infinite;
+			animation: blink 0.7s infinite;
+		}
+		@keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+		@-webkit-keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+		@-moz-keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
 	</style>
 </head>
 <body>
 	<h1>Markus Waltre</h1>
+	<h1><span class="element"></span></h1>
 
-	<ul>
+<!-- 	<ul>
 		<li><a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">LinkedIn</a></li>
 		<li><a href="https://www.behance.net/markuswaltre">Behance</a></li>
 		<li><a href="http://pattern.markuswaltre.com/">Pattern Inspiration</a></li>
 		<li><a href="http://timezones.markuswaltre.com/">Time Zones</a></li>
-		<li><a mailto="markus.waltre@gmail.com">markus.waltre@gmail.com</a></li>
-	</ul>
+		<li><a href="mailto:markus.waltre@gmail.com">markus.waltre@gmail.com</a></li>
+	</ul> -->
 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="jquery.js"></script>
+	<script src="typed.js"></script>
 	<script>
-		// alert('woot');
+		$(function(){
+			$(".element").typed({
+				strings: ["First sentence.", "Second sentence."],
+				typeSpeed: 0
+			});
+		});
 	</script>
 </body>
 </html>
